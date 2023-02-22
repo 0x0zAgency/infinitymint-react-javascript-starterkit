@@ -71,3 +71,34 @@ To run commands inside of this repository all you need to do is run the followin
 
 [Official Documentation](https://docs.infinitymint.app)</br>
 [TypeDoc Documentation](https://typedoc.org/)
+
+### Terminology
+
+The terminology used by InfinityMint can easily get overwhelming and complex to new users.
+To simplify the process of understanding, there are only a handful of concepts to remember that will be listed here:
+
+-   **[Project](#project)**
+
+-   **[Token](#token)**
+
+-   **[TokenURI](#tokenuri)**
+
+-   **[Path](#path)**
+
+#### Project
+
+Projects in InfinityMint are a _global_ configuration for how your project handles the display, functionality and content of your `Token`s.
+Editing the project should **always** be done by creating a temporary copy of the project file, and working upon that copy. This aids in rolling back versions, correcting previous mistakes etc without having to constantly redeploy projects on chain.
+
+#### Path
+
+A path is a subset/branch of the `Project` which is a variation of a `token`, otherwise known as a mint. You can configure it to hold functionality such as becoming a _receiver_ for solidity contracts, place other `ERC721`s inside the content of the `paths`, and hold data such as images, text, hyperlinks configured through these `paths`.
+Paths always start at **one**. A path with `pathId 0` will simply return no path.
+
+#### Token
+
+A token is your own `ERC721` contained with a `path`. They are held within your project configuration, and uploaded to chain through InfinityMint.
+
+#### TokenURI
+
+TokenURIs are objects within your token that contain metadata. The most useful & often extended path is within the `content` field, where you can set custom data to be read by your _[Project](#project)_. **It should be noted that this data is all publicly visible.**
