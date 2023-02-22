@@ -101,4 +101,5 @@ A token is your own `ERC721` contained with a `path`. They are held within your 
 
 #### TokenURI
 
-TokenURIs are objects within your token that contain metadata. The most useful & often extended path is within the `content` field, where you can set custom data to be read by your _[Project](#project)_. **It should be noted that this data is all publicly visible.**
+TokenURIs are links to ERC721 token receivers that get linked on chain. This comes from the [standard ERC721 spec](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721)
+A token owner must point to where the contract and its data exists on chain, which is done via the `InfinityMintLinker`.
