@@ -1,0 +1,78 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Mods
+/src/Deployments/Mods/
+
+# Content copy
+/public/imgs/paths/
+/public/imgs/assets/
+/public/imgs/content/
+
+/alpha
+/src/Images/
+
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.session
+
+/cache
+/artifacts
+/build
+
+/src/Deployments/projects/
+!/src/Deployments/projects/default.js
+/src/Styles/
+
+# testing
+/coverage
+/temp
+
+# Yarnpkg
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# production
+/build
+
+#settings
+.settings
+.session
+
+#deployments
+!/src/Deployments/projects/default.js
+/src/Deployments/scripts/
+/src/Deployments/*.json
+!/src/Deployments/scripts/manifest.json
+/src/Deployments/static/manifest.json
+/src/Deployments/*.js
+/src/Deployments/.chainId
+/src/Deployments/.deployInfo
+/src/Deployments/.deployInfo_bundle
+!/src/Deployments/production/
+
+# misc
+.DS_Store
+.env
+.envrc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+yarn.lock
+.yarn/cache
+.yarn/plugins
+
+package_lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
